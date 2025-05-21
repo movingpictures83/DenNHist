@@ -15,6 +15,9 @@ run <- function() {}
 output <- function(outputfile) {
 #par(mfrow=c(1,2))
 pdf(outputfile)
+
+#print(str(EBOut))
+write.csv(EBOut$DataNorm, paste(outputfile, "csv", sep="."))
 DenNHist(EBOut)
 }
 
